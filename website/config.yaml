@@ -122,7 +122,7 @@ params:
     button:
       enable: true
       name: "CV"
-      url: "https://github.com/soerenschneider/homepagetest/releases/download/cv/cv-soerenschneider.pdf"
+      url: "https://github.com/soerenschneider/website/releases/download/cv/cv-soerenschneider.pdf"
       download: false
       newPage: true
     socialLinks:
