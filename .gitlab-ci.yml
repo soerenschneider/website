@@ -1,0 +1,41 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: jojomi/hugo
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    GIT_COMMIT_SHA: "${CI_COMMIT_SHA}"
+    GIT_COMMIT_SHA_SHORT: "${CI_COMMIT_SHORT_SHA}"
+  script:
+  - hugo -d public_generated
+  artifacts:
+    paths:
+    - public_generated
+    expire_in: 15 min
+
+deploy:
+  stage: deploy
+  image: alpine
+  script:
+  - apk add --no-cache git openssh-client
+  - echo "${SSH_PRIVATE_KEY}" > id_rsa
+  - chmod 600 id_rsa
+  - mkdir ~/.ssh
+  - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+  - eval $(ssh-agent -s)
+  - ssh-add id_rsa
+  - git clone "git@github.com:${REPO}" public_remote
+  - if [ -f public_remote/CNAME ]; then mv public_remote/CNAME public_generated/; fi
+  - rm -rf public_remote/*
+  - mv public_generated/* public_remote/
+  - cd public_remote
+  - git config user.name "website bot"
+  - git config user.email "56670304+soerenschneider@users.noreply.github.com"
+  - git add -A
+  - git commit -m "Auto-deployment job ${CI_BUILD_ID}" || { echo "no updates"; exit 0; }
+  - git push
+  only:
+  - master

@@ -1,0 +1,55 @@
+---
+name: Build and publish Website
+
+on:
+  push:
+    branches: main
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Build website
+        env:
+          HUGO_ENVIRONMENT: production
+          TZ: Europe/Berlin
+        run: |
+          sudo apt -y install hugo && \
+          hugo \
+            --source website \
+            --minify \
+            --baseURL "https://www.soerenschneider.com/" \
+            --destination public_generated
+
+      - name: Setup ssh and checkout target repo
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          git clone git@github.com:soerenschneider/soerenschneider.github.io.git public_remote
+
+      - name: Commit and Push changes to target repo
+        run: |
+          if [ -f public_remote/CNAME ]; then mv public_remote/CNAME website/public_generated/; fi
+          rm -rf public_remote/*
+          mv website/public_generated/* public_remote/
+          cd public_remote
+          if [ -n "$(git status --porcelain)" ]; then
+            git config --local user.email "56670304+soerenschneider@users.noreply.github.com"
+            git config --local user.name "Website Bot"
+            git add .
+            git commit -m "Update"
+            git push origin
+          else
+            echo "No changes to commit."
+          fi

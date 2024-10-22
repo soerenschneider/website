@@ -1,0 +1,209 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+    \item\small{
+            {#1 \vspace{-2pt}}
+    }
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+\textbf{\Huge \scshape Sören Schneider} \\ \vspace{1pt}
+\small \href{mailto:cv-2024@soerenschneider.com}{\underline{cv-2024@soerenschneider.com}} $|$
+\href{https://www.linkedin.com/in/soeren-schneider}{\underline{linkedin.com/in/soeren-schneider}} $|$
+\href{https://github.com/soerenschneider}{\underline{github.com/soerenschneider}}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Principal Software Engineer}{October 2022 -- Present}
+{Mirantis (Contractor at Booking.com)}{Full Remote, Germany}
+\resumeItemListStart
+\resumeItem{Worked on the migration of Booking's internal distributed task execution system ({\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}7 million daily jobs) to a multi-region Kubernetes environment, improving security, testability and resilience. Focused on system architecture and implementation of microservices.}
+\resumeItem{Developed both a Kubernetes controller that gathers runtime information which is sent to Kafka and a service that reads data back from Kafka and updates records in DynamoDB}
+\resumeItem{Established standards and best-practices for code, pipelines and documentation}
+\resumeItem{Mentor and guidance for junior and mid-level engineers @Booking.com, line-manager duties @Mirantis}
+\resumeItemListEnd
+
+\resumeSubheading
+{Senior Cloud Engineer}{October 2021 -- October 2022}
+{SAP Fioneer}{Full Remote, Germany}
+\resumeItemListStart
+\resumeItem{Responsible for company-wide GitHub Enterprise integration using Azure AD, OIDC, Azure Key Vault, Terraform, Snyk and GitHub Actions}
+\resumeItem{Collaborated with cross-functional teams to drive the development of the MVP for the Commercial Lending product, focusing on architecture and infrastructure (AKS, Azure PostgreSQL)}
+\resumeItem{Mentor and guidance for junior and mid-level engineers, onboarding of new team members}
+\resumeItemListEnd
+
+\resumeSubheading
+{Cloud Engineer}{November 2018 -- September 2021}
+{Rewe Digital}{Hybrid, Köln, Germany}
+\resumeItemListStart
+\resumeItem{Operation and continuous improvements of the company's Google Cloud-based fulfillment platform (GKE), \href{https://cloud.google.com/customers/rewedigital}{\underline{Europe's most advanced food delivery warehouse}, serving over 48 teams and over 270 services}}
+\resumeItem{Led integration of Hashicorp Vault for secrets management in the platform, providing necessary tooling for successful and streamlined adoption}
+\resumeItem{Introduced Chaos Engineering at Rewe Digital, providing resiliency guidance for fellow engineering teams and organizing "game days"}
+\resumeItem{Contributed to the successful migration of $>$ 1000 repositories from Bitbucket (in combination with Jenkins) to GitHub Enterprise, ensuring a seamless transition and data integrity}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software Architect / Cloud Migration Lead}{January 2015 -- October 2018}
+{CDQ AG}{Full Remote, St. Gallen, Switzerland}
+\resumeItemListStart
+\resumeItem{Developed MVP and setup complete infrastructure for the company's first product, a SaaS data-curation platform for enterprises, comprising $>$ 200 million records from more than 20 renowned Fortune 500 companies today}
+\resumeItem{Translated business requirements into technical solutions and implemented them}
+\resumeItem{Planned and performed migration from VMware vSphere to AWS while ensuring minimal disruption and seamless integration}
+\resumeItem{Operated and continuously improved the AWS landscape, led migration from AWS ECS to Kubernetes (kOps)}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software Engineer}{October 2013 -- December 2014}
+{OpenCMS}{Köln, Germany}
+\resumeItemListStart
+\resumeItem{Development on OpenCMS kernel, ownership of the full-text search module powered by Apache Solr}
+\resumeItem{Gathering requirements from customers directly and realizing small-scoped customization projects}
+\resumeItem{Introduced Docker to project to enable unified testing}
+\resumeItemListEnd
+
+\resumeSubheading
+{Research Assistant}{November 2008 -- June 2013}
+{Fraunhofer IESE}{Kaiserslautern, Germany}
+\resumeItemListStart
+\resumeItem{Participated in the European AdiWa project by developing a model-based Java backend communicating via MQTT}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Hybrid Cloud} $|$ \emph{AWS, Kubernetes, Service Mesh, GitOps, Golang,Terraform, Ansible}}{2020 -- Present}
+\resumeItemListStart
+\resumeItem{Development and operation of my multi-region \href{https://github.com/soerenschneider/soeren.cloud}{\underline{own hybrid cloud}} using AWS, Open Source building blocks and developing custom tooling. Applied IaC principles and served via \href{https://github.com/soerenschneider/k8s-gitops}{\underline{GitOps}}.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Master of Science, 1.7, Information Systems}{June 2013}
+{TH Bingen}{}
+
+\resumeSubheading
+{Bachelor of Science, 1.7, Computer Science}{June 2009}
+{TH Bingen}{}
+\resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Development}{: Golang, Python, Kotlin/Java, SQL, Troubleshooting \& Debugging skills, GitHub Actions, GitLab} \\
+\textbf{Public Clouds}{: Expertise in AWS, Google Cloud, Azure (descending order)} \\
+\textbf{Infrastructure}{: Kubernetes, Istio, Hashicorp Vault, Terraform \& Terragrunt, Packer, Ansible, OpenTelemetry, Loki } \\
+\textbf{Architecture}{: Proficiency in designing scalable and robust systems, API Design, Resilient systems } \\
+\textbf{Networking}{: TCP, UDP, VPN, L3, L4, firewalling, load balancing, network security} \\
+}}
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}
