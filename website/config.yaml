@@ -120,7 +120,7 @@ params:
       enable: true
       roundImage: false
     button:
-      enable: false
+      enable: true
       name: "CV"
       url: "https://github.com/soerenschneider/website/releases/download/cv/cv-soerenschneider.pdf"
       download: false
@@ -153,7 +153,7 @@ params:
 
   # Experience
   experience:
-    enable: true
+    enable: false
     # title: "Custom Name"
     items:
       - job: "Principal Software Engineer"
