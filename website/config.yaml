@@ -120,7 +120,7 @@ params:
       enable: true
       roundImage: false
     button:
-      enable: true
+      enable: false
       name: "CV"
       url: "https://github.com/soerenschneider/website/releases/download/cv/cv-soerenschneider.pdf"
       download: false
