@@ -112,19 +112,19 @@ params:
     title: "Hi 👋! I'm Sören, a software engineer living in Düsseldorf."
     subtitle: ""
     content: |
-      I'm currently working as a principal software engineer at Mirantis. With 10+ years of experience, I've filled various distinct technical roles. Very interested in the intersection of software engineering, automation, resilience, security, and distributed systems.
-
-      Outside of tech, I'm interested in music, photography, good food, and maintaining an active lifestyle.
+      I am currently a Principal Software Engineer at Mirantis, bringing over 10 years of experience in various technical roles. I have a strong passion for the intersection of software engineering, automation, resilience, security, and distributed systems. I love to learn new things, and my GitHub profile showcases my ongoing projects and explorations.
+  
+      Beyond technology, I enjoy music, photography, exploring good food, and maintaining an active lifestyle.
     image: /img/portrait.jpg
     bottomImage:
       enable: true
       roundImage: false
     button:
       enable: true
-      name: "CV"
+      name: "Download CV"
       url: "https://github.com/soerenschneider/website/releases/download/cv/cv-soerenschneider.pdf"
       download: false
-      newPage: true
+      newPage: false
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
@@ -132,7 +132,7 @@ params:
         - icon: fab fa-linkedin
           url: "https://www.linkedin.com/in/soeren-schneider"
         - icon: fa fa-envelope
-          url: "mailto:website-2023@soerenschneider.com"
+          url: "mailto:website-2024@soerenschneider.com"
             #      customIcons:
             #- icon: /fav.png
             #url: "https://example.com"
@@ -153,7 +153,7 @@ params:
 
   # Experience
   experience:
-    enable: false
+    enable: true
     # title: "Custom Name"
     items:
       - job: "Principal Software Engineer"
@@ -166,7 +166,7 @@ params:
           url: ""
         info:
           enable: true
-          content: "Full Remote, Germany"
+          content: "Full Remote, Germany. Working as a contractor for Booking.com"
         content: |
           - Worked on the migration of Booking’s internal distributed task execution system (∼7 million daily jobs) to a multi-region Kubernetes environment, improving security, testability and resilience. Focused on system architecture and implementation of microservices.
           - Developed both a Kubernetes controller that gathers runtime information which is sent to Kafka and a service that reads data back from Kafka and updates records in DynamoDB
@@ -245,57 +245,30 @@ params:
       - title: "Master of Science, Information Systems, 1.7"
         school:
           name: "TH Bingen"
-        date: "2013"
+        date: "June 2013"
+      - title: "Bachelor of Science, Computer Science, 1.7"
+        school:
+          name: "TH Bingen"
+        date: "June 2009"
 
   # projects
   projects:
-    enable: false
+    enable: true
     # title: "Custom Name"
     items:
-      - title: Hugo Profile
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
-        featured:
-          name: Demo
-          link: https://hugo-profile.netlify.app
+      - title: "Building my own hybrid cloud"
+        image: "img/overview.svg"
+        content: |
+          Developed a multi-region hybrid cloud infrastructure using AWS and Kubernetes, creating custom tooling (more than 21 repositories). Applied Infrastructure as Code (IaC) for automated deployment and management, and employed GitOps practices for version control and continuous delivery.
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
+          - "AWS"
+          - "Kubernetes"
+          - "Istio"
+          - "IaC"
+          - "GitOps"
         links:
-          - icon: fa fa-envelope
-            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
-          - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
-
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
-        featured:
-          name: Demo
-          link: https://django-converter.herokuapp.com
-        badges:
-          - "Django"
-          - "Bootstrap"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
-
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
-        featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
-        badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+          - icon: "fab fa-github"
+            url: https://github.com/soerenschneider/soeren.cloud
 
   #Contact
   contact:
@@ -320,7 +293,7 @@ params:
     socialNetworks:
       github: "https://github.com/soerenschneider"
       linkedin: "https://www.linkedin.com/in/soeren-schneider"
-      email: "mailto:soeren@soeren.soeren"
+      email: "mailto:website-2024@soerenschneider.com"
 
   # List pages like blogs and posts
   listPages:
