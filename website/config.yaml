@@ -49,6 +49,8 @@ params:
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
+  customCSS: false
+
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
   # Note the lack of "" in true, it should be of boolean type.
@@ -73,16 +75,15 @@ params:
     textAlign: left # default: left
 
   # color preference
-  # color:
-  #   textColor:
+  color:
   #   secondaryTextColor:
   #   backgroundColor:
   #   secondaryBackgroundColor:
   #   primaryColor:
   #   secondaryColor:
+    darkmode:
+      textLinkColor: "#00bbff"
 
-  #   darkmode:
-  #     textColor:
   #     secondaryTextColor:
   #     backgroundColor:
   #     secondaryBackgroundColor:
@@ -111,10 +112,7 @@ params:
       #intro: "Hi"
     title: "Hi 👋! I'm Sören, a software engineer living in Düsseldorf."
     subtitle: ""
-    content: |
-      I am currently a Principal Software Engineer at Mirantis, bringing over 10 years of experience in various technical roles. I have a strong passion for the intersection of software engineering, automation, resilience, security, and distributed systems. I love to learn new things, and my GitHub profile showcases my ongoing projects and explorations.
-  
-      Beyond technology, I enjoy music, photography, exploring good food, and maintaining an active lifestyle.
+    content: "I am currently a Principal Software Engineer at Mirantis, bringing over [10 years of experience in various technical roles](#experience). I have a strong passion for the intersection of software engineering, automation, resilience, security, and distributed systems. I love to learn new things, and my [GitHub profile](https://github.com/soerenschneider) showcases my ongoing projects and explorations. <br/><br/>Beyond technology, I enjoy going to concerts, taking photos, cooking, and maintaining an active lifestyle."
     image: /img/portrait.jpg
     bottomImage:
       enable: true
