@@ -158,77 +158,93 @@ params:
     items:
       - job: "Principal Software Engineer"
         company: "Mirantis"
-        companyUrl: "https://example.com"
-        date: "Oct 2022 - present"
+        companyUrl: "https://www.mirantis.com"
+        date: "October 2022 - present"
         featuredLink:
           enable: false
           name: ""
           url: ""
         info:
-          enable: false
-          content: ""
+          enable: true
+          content: "Full Remote, Germany"
         content: |
-          Currently, I am working as a principal software engineer as an external contractor, primarily engaged in the migration of an internal, heavily utilized distributed scheduling system to AWS EKS/Kubernetes. I am also working as a line manager for a small number of internal developers, conducting 1:1 sessions and helping improve their skillset.
+          - Worked on the migration of Booking’s internal distributed task execution system (∼7 million daily jobs) to a multi-region Kubernetes environment, improving security, testability and resilience. Focused on system architecture and implementation of microservices.
+          - Developed both a Kubernetes controller that gathers runtime information which is sent to Kafka and a service that reads data back from Kafka and updates records in DynamoDB
+          - Established standards and best-practices for code, pipelines and documentation
+          - Mentor and guidance for junior and mid-level engineers @Booking.com, line-manager duties @Mirantis
 
       - job: "Senior Cloud Engineer"
         company: "SAP Fioneer"
-        companyUrl: "https://example.com"
-        date: "Dec 2021 - Oct 2022"
+        companyUrl: "https://www.sapfioneer.com/"
+        date: "October 2021 - October 2022"
         featuredLink:
           enable: false
           url: ""
         info:
-          enable: false
-          content: ""
+          enable: true
+          content: "Full Remote, Germany"
         content: |
-          I established IaC principles to facilitate scalable management of both the company's Azure tenants and their GitHub Enterprise offering. Additionally, I set up infrastructural aspects of SAP Fioneer's Commercial Lending product. 
+          - Responsible for company-wide GitHub Enterprise integration using Azure AD, OIDC, Azure Key Vault, Terraform, Snyk and GitHub Actions
+          - Collaborated with cross-functional teams to drive the development of the MVP for the Commercial Lending product, focusing on architecture and infrastructure (AKS, Azure PostgreSQL)
+          - Mentor and guidance for junior and mid-level engineers, onboarding of new team members 
 
       - job: "Cloud Engineer"
         company: "Rewe Digital"
         companyUrl: "https://www.rewe-digital.com"
-        date: "Nov 2018 - Dec 2021"
+        date: "November 2018 - September 2021"
         info:
-          enable: false
+          enable: true
+          content: "Hybrid, Köln, Germany"
         featuredLink:
           enable: false
           url: "https://example.com"
         content: |
-          I contributed to the development and enhancement of the company's large fulfillment platform on Google Cloud. Also, I took the lead in establishing a Chaos Engineering special interest group and introduced resilience methodologies on a company-wide scope in collaboration with my team.
+          - Operation and continuous improvements of the company’s Google Cloud-based fulfillment platform (GKE), [Europe’s most advanced food delivery warehouse](https://heise.de), serving over 48 teams and over 270 services
+          - Led integration of Hashicorp Vault for secrets management in the platform, providing necessary tooling for successful and streamlined adoption
+          - Introduced Chaos Engineering at Rewe Digital, providing resiliency guidance for fellow engineering teams and organizing ”game days”
+          - Contributed to the successful migration of > 1000 repositories from Bitbucket (in combination with Jenkins) to GitHub Enterprise, ensuring a seamless transition and data integrity
 
-      - job: "Software Architect (15-17) / Head of Cloud transformation (17-19)"
+      - job: "Software Architect / Cloud Migration Lead"
         company: "CDQ AG"
         companyUrl: "https://www.cdq.com"
         date: "Jan 2015 - Nov 2018"
         info:
-          enable: false
+          enable: true
+          content: "Full Remote, St. Gallen, Switzerland"
         content: |
-          I architected and realized the entire data sharing platform for the startup as the first technical hire which enabled us to get funding and grow the company. After a role change I became responsible for the planning and migration / adaption of all components to AWS.
+          - Developed MVP and setup complete infrastructure for the company’s first product, a SaaS data-curation platform for enterprises, comprising > 200 million records from more than 20 renowned Fortune 500 companies today
+          - Translated business requirements into technical solutions and implemented them
+          - Planned and performed migration from VMware vSphere to AWS while ensuring minimal disruption and seamless integration
+          - Operated and continuously improved the AWS landscape, led migration from AWS ECS to Kubernetes (kOps
 
       - job: "Software Developer"
         company: "OpenCMS"
         companyUrl: "http://www.opencms.org/en/"
-        date: "Aug 2013 - Dec 2014"
+        date: "October 2013 - December 2014"
         info:
           enable: false
-        content: "Being driven by the idealistic motive of getting paid working on Open Source software, I got my first full-time job working as a software developer on OpenCMS."
+        content: |
+          -  Development on OpenCMS kernel, ownership of the full-text search module powered by Apache Solr
+          -  Gathering requirements from customers directly and realizing small-scoped customization projects
+          -  Introduced Docker to project to enable unified testing
 
       - job: "Research Assistant"
         company: "Fraunhofer Institut IESE"
         companyUrl: "https://www.iese.fraunhofer.de"
-        date: "Feb 2008 - Jun 2013"
+        date: "February 2008 - June 2013"
         info:
           enable: false
-        content: "I initiated my professional journey and acquired foundational experience in a corporate and scientific setting."
+        content: "Participated in the European AdiWa project by developing a model-based Java backend communicating via MQTT"
 
   # Education
   education:
-    enable: false
+    enable: true
     # title: "Custom Name"
     index: false
     items:
-      - title: "Master of Science, Information Systems"
+      - title: "Master of Science, Information Systems, 1.7"
         school:
-          name: "Hochschule Bingen"
+          name: "TH Bingen"
         date: "2013"
 
   # projects
